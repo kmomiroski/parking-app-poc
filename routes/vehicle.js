@@ -1,9 +1,8 @@
-import { Router } from "express";
-import routeHandler from "../middleware/routeHandler";
-import create from "../handlers/vehicle/create";
-
-const router = Router();
+const express = require("express");
+const router = express.Router();
+const routeHandler = require("../middleware/routeHandler");
+const create = require("../handlers/vehicle/create");
 
 router.post("/api/v1/vehicle/:owner/create/:isDefault", routeHandler(create));
 
-export default router;
+module.exports = router;

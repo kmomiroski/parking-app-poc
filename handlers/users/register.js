@@ -1,9 +1,9 @@
-import User from "../../db_models/User";
-import Joi from "@hapi/joi";
-import validateInput from "../../lib/validate";
-import bcrypt from "bcryptjs";
+const User = require("../../db_models/User");
+const Joi = require("@hapi/joi");
+const validateInput = require("../../lib/validate");
+const bcrypt = require("bcryptjs");
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   const registerSchema = Joi.object({
     fullName: Joi.string().min(4).required(),
     email: Joi.string().min(12).required().email(),

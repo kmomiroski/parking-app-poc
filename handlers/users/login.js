@@ -1,11 +1,11 @@
-import User from "../../db_models/User";
-import Joi from "@hapi/joi";
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import validateInput from "../../lib/validate";
-import "dotenv/config";
+const User = require("../../db_models/User");
+const Joi = require("@hapi/joi");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const validateInput = require("../../lib/validate");
+require("dotenv/config");
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   const loginSchema = Joi.object({
     email: Joi.string().min(8).required().email(),
     password: Joi.string().min(8).required(),

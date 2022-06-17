@@ -1,6 +1,6 @@
-import User from "../../db_models/User";
+const User = require("../../db_models/User");
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   const ownerFlag = req.params.owner;
 
   if (!ownerFlag) {

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const parkngHistorySchema = Schema({
@@ -13,4 +13,4 @@ const parkngHistorySchema = Schema({
 
 const ParkingHistory = mongoose.model("ParkingHistories", parkngHistorySchema);
 
-export default ParkingHistory;
+module.exports = ParkingHistory;

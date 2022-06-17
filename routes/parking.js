@@ -1,11 +1,10 @@
-import { Router } from "express";
-import routeHandler from "../middleware/routeHandler";
-import create from "../handlers/parking-history/create";
-import getAll from "../handlers/parking-history/list-all";
-
-const router = Router();
+const express = require("express");
+const router = express.Router();
+const routeHandler = require("../middleware/routeHandler");
+const create = require("../handlers/parking-history/create");
+const getAll = require("../handlers/parking-history/list-all");
 
 router.post("/api/v1/parking-history/create", routeHandler(create));
 router.get("/api/v1/parking-history/", routeHandler(getAll));
 
-export default router;
+module.exports = router;

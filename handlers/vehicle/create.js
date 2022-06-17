@@ -1,9 +1,9 @@
-import Vehicle from "../../db_models/Vehicle";
-import Joi from "@hapi/joi";
-import validateInput from "../../lib/validate";
-import User from "../../db_models/User";
+const Vehicle = require("../../db_models/Vehicle");
+const Joi = require("@hapi/joi");
+const validateInput = require("../../lib/validate");
+const User = require("../../db_models/User");
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   const createVehicleSchema = Joi.object({
     make: Joi.string().min(4).required(),
     model: Joi.string().min(4).required(),

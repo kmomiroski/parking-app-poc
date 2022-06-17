@@ -1,8 +1,8 @@
-import ParkingHistory from "../../db_models/ParkingHistory";
-import Joi from "@hapi/joi";
-import validateInput from "../../lib/validate";
+const ParkingHistory = require("../../db_models/ParkingHistory");
+const Joi = require("@hapi/joi");
+const validateInput = require("../../lib/validate");
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   const parkingHistorySchema = Joi.object({
     startParkingSession: Joi.date().required(),
     endParkingSession: Joi.date().required(),

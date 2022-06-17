@@ -1,10 +1,10 @@
-import express from "express";
-import cors from "cors";
-import mongoose from "mongoose";
-import morgan from "morgan";
-import users from "./routes/users";
-import vehicle from "./routes/vehicle";
-import parkingHistory from "./routes/parking";
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const users = require("./routes/users");
+const vehicle = require("./routes/vehicle");
+const parkingHistory = require("./routes/parking");
 
 // DB CONNECTION
 mongoose

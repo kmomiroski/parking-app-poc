@@ -1,4 +1,4 @@
-export default (handler) => {
+module.exports = (handler) => {
   return async (req, res) => {
     try {
       const result = await handler(req, res);
