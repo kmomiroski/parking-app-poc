@@ -13,7 +13,7 @@ const tokenVerify = (req, res, next) => {
     req.userData = verifyToken;
     next();
   } catch (err) {
-    return res.status(400).json({
+    return res.status(403).json({
       message: err.message,
     });
   }
