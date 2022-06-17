@@ -46,8 +46,8 @@ module.exports = async (req, res) => {
   const token = jwt.sign(
     {
       _id: isUserRegistered.id,
-      name: isPasswordValid.fullName,
-      email: isPasswordValid.email,
+      name: isUserRegistered.fullName,
+      email: isUserRegistered.email,
     },
     process.env.JWT_SECRET,
     { expiresIn: "1h" }
